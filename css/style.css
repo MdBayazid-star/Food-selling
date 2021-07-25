@@ -1,0 +1,335 @@
+/* fonts */
+@font-face {
+    font-family:"Releway-regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family:"Releway-medium";
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+    font-family: "Releway-extrabold";
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Releway-bold";
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+    font-family:"Releway-samibold";
+    src: url(../fonts/Raleway-SamiBold.ttf);
+}
+@font-face {
+    font-family:"Releway-black";
+    src: url(../fonts/Raleway-Black.ttf);
+}
+
+/* colors */
+:root {
+    --primary:#EEBF00;
+    --secondary: #232B38;
+    --ternary: #6C6C6C;
+    --danger: #FE4545;
+    --pure: #FEFEFE;
+    --light: #F0F0F0;
+    --heaven: #FFFFFF;
+    --footer: #2D333F;
+}
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    -webkit-font-smoothing: antialiAsed;
+}
+section {
+    padding: 4rem 0;
+}
+/* Utlity Class */
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.magic-shadows {
+    position: relative;
+    color: var(--heaven);
+}
+.magic-shadows::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 69px;
+    background: url(../icons/shadow.svg) no-repeat center;
+    bottom:-24px;
+    z-index: -1;
+}
+.btn {
+    padding: 0.75rem 0.75rem;
+    border-radius: 4px;
+    line-height: 0.8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition:all 0.3s ease;
+    border: 1px solid transparent;
+}
+.btn-primary {
+    background: var(--primary);
+    color: var(--heaven);
+}
+.btn-primary:hover {
+    background: var(--heaven);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--heaven);
+}
+.btn-secondary:hover {
+    background: var(--heaven);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+.section-heading {
+    font-family: "Releway-bold";
+    text-align: center;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.section-heading::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: url(../icons/hr.svg) no-repeat center;
+    position: absolute;
+    bottom: -40px;
+}
+.text-center {
+    text-align: center;
+}
+/* responsive */
+@media (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width:792px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        max-width: 1152px;
+    }
+}
+
+header.topbar {
+    background: var(--secondary);
+    color: var(--pure);
+    font-family: Releway-samibold;
+    padding: 0.75rem 0;
+}
+header.topbar .auth > div a {
+    color: var(--pure);
+    text-decoration: none;
+}
+header.topbar .icons a {
+    margin-right: 0.6rem;
+}
+header.topbar .auth .divider {
+    padding: 0 1rem;
+}
+header.topbar .auth>div img {
+    margin-right: 0.35rem;
+}
+nav .top {
+    padding: 1.5rem 0;
+}
+nav .top .contact h5,
+nav .top .time h5 {
+    font-family: Releway-black;
+    margin-bottom: 0.25rem;
+}
+nav .top .contact h6,
+nav .top .time h6 {
+    font-family: Releway-medium;
+    letter-spacing: 0.055rem;
+    font-size: 0.75rem;
+    color: var(--ternary);
+}
+nav .top .contact img,
+nav .top .time img {
+    margin-right: 1rem;
+}
+nav .navbar {
+    background: var(--heaven);
+}
+nav .navbar a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-family:"Releway-samibold";
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    transition: all .3s ease;
+}
+nav .navbar a.active,
+nav .navbar a:hover {
+    background: var(--primary);
+    color: var(--pure);
+}
+header.hero {
+    height: 600px;
+    background: url(../images/hero.png) no-repeat;
+    background-position: 0% 0%;
+    overflow: hidden;
+    background-size: cover;
+}
+header.hero .container {
+    position: relative;
+}
+header.hero .welcome {
+    margin-bottom: 0.25rem;
+}
+header.hero .welcome span {
+    font-family: "Releway-bold";
+    color: var(--secondary);
+    margin-right: 0.75rem;
+}
+header.hero h1 {
+    font-family: "Releway-extrabold";
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+header.hero h1 span {
+    color: var(--primary);
+}
+header.hero p {
+    font-family: "Releway-medium";
+    width: 50%;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+header.hero button:first-child {
+    margin-right: 0.50rem;
+}
+header.hero .hero-images {
+    position: absolute;
+    top: -40px;
+    right: 40px;
+}
+section.top-products {
+    background: var(--light);
+}
+section.top-products .slider {
+    position: relative;
+}
+section.top-products .food-slider .food-card {
+    background: var(--heaven);
+    padding: 1.5rem 0;
+    border-radius: 4px;
+}
+section.top-products .food-slider .food-card .product-image img {
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+    padding-bottom: 1rem;
+}
+hr {
+    border: 1px solid var(--light);
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+section.top-products .food-slider .food-card h2 {
+    font-family: "Releway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+section.top-products .food-slider .food-card .stars {
+    margin-bottom: 0.5rem;
+}
+section.top-products .food-slider .food-card .stars img {
+    margin-right: 0.25rem;
+}
+section.top-products .food-slider .food-card .price {
+    font-family:"Releway-medium";
+    color: var(--danger);
+    margin-bottom: 1rem;
+}
+
+section.top-products .food-slider .food-card button {
+    font-family:"Releway-medium";
+    color: var(--secondary);
+    background: var(--heaven);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+section.top-products .food-slider .food-card button:hover {
+    background: var(--primary);
+    color: var(--heaven);
+}
+section.top-products .food-slider .food-card button img {
+    background: var(--primary);
+    padding: 0.50rem;
+    height: 32px;
+    margin-right: 1.2rem;
+}
+.slick-slide {
+    margin: 0 27px;
+}
+.slick-list {
+    margin: 0 -27px;
+}
+.top-products .slider-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+.prev-btn {
+    position: absolute;
+    top: 46%;
+    left: -3rem;
+    z-index: 1;
+}
+.next-btn {
+    position: absolute;
+    top: 46%;
+    right: -3rem;
+    z-index: 1;
+}
