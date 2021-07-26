@@ -164,7 +164,7 @@ section {
     text-align: center;
 }
 .text-primary {
-    color: var(--primary);
+    color: var(--primary) !important;
 }
 .text-pure {
     color: var(--pure);
@@ -486,7 +486,10 @@ section.our-services .service-card h2 {
     font-family: "Releway-bold";
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: var(--secondary);
+    color:var(--secondary);
+}
+section.our-services .service-card:nth-child(2) h2 {
+    color: var(--primary);
 }
 section.our-services .service-card p {
     line-height: 1.6;
@@ -940,3 +943,5 @@ footer.copyright a {
         max-width: 1152px;
     }
 }
+
+
