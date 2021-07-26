@@ -731,7 +731,8 @@ footer .box p {
 }
 footer .box:nth-child(3)>div {
     display: flex;
-    justify-content: content;
+    justify-content: center;
+    align-items: center;
 }
 footer .box:nth-child(3) {
     text-align: left;
@@ -744,6 +745,7 @@ footer .box:nth-child(3)>div img {
 }
 footer .box:nth-child(3) ul li {
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 footer.copyright {
     padding: 1rem 0;
